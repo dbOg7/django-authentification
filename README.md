@@ -37,3 +37,10 @@
     python -c 'from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())'
 
     coller la secret_key générer dans le fichier .env
+
+    python ./manage.py makemigrations
+
+    python ./manage.py migrate
+
+    python ./manage.py runserver
+
