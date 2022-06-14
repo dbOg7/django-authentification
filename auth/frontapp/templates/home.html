@@ -1,0 +1,24 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<main class="col-md-3 mx-auto p-5">
+    
+    <h1 class="mb-5">Home</h1>
+
+    {% if user.is_authenticated %}
+
+        <h3>Hello {{ user.username }}!</h3>
+        <br>
+        <a href="{% url 'logout' %}">Se déconnecter</a>
+    
+    {% else %}
+
+        <p>Tu n'es pas connecté!</p>
+
+        <a href="{% url 'login' %}">Connexion</a>
+        <br>
+        <a href="{% url 'register' %}">Je crée un compte</a>
+
+    {% endif %}
+
+{% endblock %}
