@@ -1,9 +1,13 @@
 {% extends 'index.html' %}
 
 {% block content %}
-<form action="" method="POST">
-    {% csrf_token %}
-    {{form}}
-    <input type="submit" value="submit">
-</form>
+<div style="margin-top: 150px; text-align: center;">
+    <h1>Connexion</h1>
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="submit">
+    </form>
+</div>
+
 {% endblock %}
